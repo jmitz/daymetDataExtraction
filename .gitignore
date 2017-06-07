@@ -1,0 +1,18 @@
+*.pyc
+*.tbx
+*.dbf
+*.prj
+*.sbn
+*.sbx
+*.shp*
+*.shx
+*.cpg
+*.doc*
+practice*
+
+##geodatabase 
+*.gdb/*
+
+##jupyter notebook
+.ipynb_checkpoints/*
+__pycache__/*
