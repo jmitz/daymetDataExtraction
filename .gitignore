@@ -12,7 +12,11 @@ practice*
 
 ##geodatabase 
 *.gdb/*
+info/
+daymetmask*
+
 
 ##jupyter notebook
 .ipynb_checkpoints/*
 __pycache__/*
+
