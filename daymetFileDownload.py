@@ -6,7 +6,7 @@
 #
 # Created:     17/11/2016
 # Copyright:   (c) jmitzelfelt 2016
-# Licence:     <your licence>
+# Licence:     Unlicense
 # -------------------------------------------------------------------------------
 
 import urllib.request

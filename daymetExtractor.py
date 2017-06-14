@@ -1,3 +1,14 @@
+# -------------------------------------------------------------------------------
+# Name:        daymetFileDownload.py
+# Purpose:
+#
+# Author:      jmitzelfelt
+#
+# Created:     7/2/2017
+# Copyright:   (c) jmitzelfelt 2017
+# Licence:     Unlicense
+# -------------------------------------------------------------------------------
+
 import numpy as np
 from osgeo import gdal
 from osgeo import gdalconst
@@ -41,14 +52,6 @@ def sortFileInfoList(inFileInfo, inDataTypes):
 
 
 # Adapted from http://stackoverflow.com/questions/10454316/how-to-project-and-resample-a-grid-to-match-another-grid-with-gdal-python
-# projectFile('C:/Users/jmitzelfelt/Desktop/ClimateData/TopoWx/tmax_2015.nc', 'E:/rasterExtraction/raster_mask', 'C:/Users/jmitzelfelt/Desktop/tmax_2015.nc', 'netCDF')
-# projectFile('C:/Users/jmitzelfelt/Desktop/ClimateData/TopoWx/tmax_2015.nc', 'E:/rasterExtraction/raster_mask', 'C:/Users/jmitzelfelt/Desktop/tmax_2015.tif', 'GTIFF')
-# testLayer = projectNcFile('E:/TopoWx/Daily/tmax/tmax_2015.nc', 'E:/rasterExtraction/raster_mask')
-# projectFile('E:/daymet/Daily/tmax/daymet_v3_tmax_1980_na.nc4', 'E:/rasterExtraction/daymetmask','C:/Users/jmitzelfelt/Desktop/daymetTest.tiff' , 'GTIFF')
-# thisFile = projectFile('E:/daymet/Daily/tmax/daymet_v3_tmax_1980_na.nc4', 'E:/rasterExtraction/daymetmask')
-# projectFile('E:/daymet/Daily/tmax/daymet_v3_tmax_1980_na.nc4', 'E:/rasterExtraction/daymetmask','C:/Users/jmitzelfelt/Desktop/daymetTest.tiff' , 'GTIFF')
-
-
 def projectFile(
     inDataLayer,
     inMaskLayer,
@@ -58,7 +61,6 @@ def projectFile(
     dataLayer = gdal.Open(inDataLayer, gdalconst.GA_ReadOnly)
     dataProj = osr.SpatialReference()
     dataProj.ImportFromWkt(dataLayer.GetProjection())
-    dataGeoTrans = dataLayer.GetGeoTransform()
     maskLayer = gdal.Open(inMaskLayer, gdalconst.GA_ReadOnly)
     maskProj = osr.SpatialReference()
     maskProj.ImportFromWkt(maskLayer.GetProjection())
