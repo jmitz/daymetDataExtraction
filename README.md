@@ -1,6 +1,12 @@
 # Daymet Data Download
 ### Purpose
 Script to download [Daymet](https://daymet.ornl.gov/) climatalogical data.
+<<<<<<< HEAD
+=======
+
+Script to extract climate data for the Greater Yellowstone Area (GYA) from the Daymet rasters. (Actually this script will extract data for any raster mask )
+
+This was based on work done by Mike Tercek (miketercek@yahoo.com) The file structure of the CSV files integrate with extraction and analysis tools developed for the Yellowstone Center for Resources, Yellowstone National Park.
 
 Script to extract climate data for the Greater Yellowstone Area (GYA) from the Daymet rasters. (Actually this script will extract data for any raster mask )
 
